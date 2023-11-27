@@ -1,4 +1,4 @@
-import { g, config } from '@grafbase/sdk'
+import { config, connector, g } from '@grafbase/sdk'
 
 // Welcome to Grafbase!
 //
@@ -41,14 +41,14 @@ const Project = g.model('Project',
 export default config({
   schema: g,
   // Authentication - https://grafbase.com/docs/auth
-  auth: {
+  // auth: {
     // OpenID Connect
     // const oidc = auth.OpenIDConnect({ issuer: g.env('OIDC_ISSUER_URL') })
     // providers: [oidc],
-    rules: (rules) => {
-      rules.public()
-    },
-  },
+  //   rules: (rules) => {
+  //     rules.public()
+  //   },
+  // },
   // Caching - https://grafbase.com/docs/graphql-edge-caching
   // cache: {
   //   rules: [
